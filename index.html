@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img logo.png" type="image/x-icon">
+  <meta name="description" content="We aim to provide valuable and useful information about STRICT where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>STRICT</title>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e3a8a;
+      --accent: #38bdf8;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    header img {
+      width: 50px;
+    }
+
+    header h1 {
+      color: var(--primary);
+    }
+
+    /* HERO */
+    .hero {
+      background-image: url("img\ \ \(9\).jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 60vh;
+      padding: 70px 20px;
+    }
+
+    .hero-box {
+      max-width: 1100px;
+      margin: auto;
+      gap: 40px;
+      color: white;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+    }
+
+    .hero-text p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .hero-text a {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--accent);
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* INTRO */
+    .section {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .section h3 {
+      font-size: 32px;
+      color: var(--dark);
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: 20px auto;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* FEATURES (الجزء اللي كان ناقص) */
+    .features {
+      padding: 70px 20px;
+      background: #eef2ff;
+    }
+
+    .features-box {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+      transition: .3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature img {
+      width: 70px;
+      margin-bottom: 15px;
+    }
+
+    .feature h4 {
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .feature p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: .3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: url("img/img\ \ \(8\).jpg") center/cover;
+      position: relative;
+      padding: 90px 20px;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, .85);
+    }
+
+    .contact-content {
+      position: relative;
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      color: white;
+    }
+
+    .contact-content h3 {
+      font-size: 36px;
+    }
+
+    .contact-content p {
+      margin: 15px 0 30px;
+      color: #cbd5f5;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 14px;
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .footer-icons img {
+      width: 35px;
+      margin: 0 5px;
+    }
+
+    footer p {
+      margin-top: 15px;
+      color: #555;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      .hero-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-box img {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .features-box {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:500px) {
+      .hero-text h2 {
+        font-size: 32px;
+      }
+
+      .features-box {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="img logo.png">
+    <h1>STRICT</h1>
+  </header>
+
+  <section class="hero">
+    <div class="hero-box">
+      <div class="hero-text" style="text-align: center;">
+        <h2>STRICT</h2>
+        <hr style="width: 100vh; margin: auto; height: 5px; background-color: #1e3a8a;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, similique.</p>
+        <a href="#">Call To Action</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Simple & Pure Design</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-box">
+      <div class="feature">
+        <img src="img  (6).jpg">
+        <h4>OPTIMIZED FOR ALL DEVICES</h4>
+        <p>Strict test ensures maximum compatibility across all devices.</p>
+      </div>
+      <div class="feature">
+        <img src="img  (10).jpg">
+        <h4>CLEAN & MINIMAL DESIGN</h4>
+        <p>This application has a smooth control to be used for different projects.</p>
+      </div>
+      <div class="feature">
+        <img src="img  (11).jpg">
+        <h4>FONT AWESOME ICON</h4>
+        <p>The application comes with icons for easy visual appeal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <img src="img  (1).jpg">
+    <img src="img  (2).jpg">
+    <img src="img  (3).jpg">
+    <img src="img  (4).jpg">
+    <img src="img  (5).jpg">
+    <img src="img  (1).jpg">
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="contact-content">
+      <h3>Stay With Us</h3>
+      <p>We ensure quality & support</p>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button>Send Message</button>
+      </form>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <p>&copy; STRICT 2025 </p>
+  </footer>
+</body>
+
+</html>
