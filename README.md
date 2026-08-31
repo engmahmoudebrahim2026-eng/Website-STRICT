@@ -125,9 +125,7 @@ different screen sizes.
 🖥️ **Desktop**
 
 </div>
-
 ---
-
 # 📂 Project Structure
 
 ```text
