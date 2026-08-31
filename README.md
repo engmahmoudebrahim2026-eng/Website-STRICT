@@ -145,3 +145,7 @@ STRIST/
 │   └── ...
 │
 └── README.md
+
+## Responsive Design
+
+This project is designed to provide a responsive experience across different screen sizes.
